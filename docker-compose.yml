@@ -1,0 +1,9 @@
+version: "3.10"
+services:
+  python-app:
+    container_name: my-python-app
+    build: .
+    volumes:
+      - ./app:/app
+    working_dir: /app
+    command: python3 main.py
