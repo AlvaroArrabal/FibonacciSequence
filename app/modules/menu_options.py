@@ -15,7 +15,7 @@ def display_menu():
         print("2. Get number of iterations.")
         print("3. Get sequence.")
         print("4. Set number of iterations.")
-        print("5. Set sequence.")
+        print("5. Get position.")
         print("0. Exit.")
 
         try:
@@ -26,7 +26,8 @@ def display_menu():
 
         if option == 1:
             if created:
-                print("\nFibonacci sequence already created!")
+                print("\nNew Fibonacci sequence created!")
+                myFibonacci = Fibonacci()
             else:
                 print("\nCreating Fibonacci sequence with default iterations...")
                 myFibonacci = Fibonacci()
@@ -49,7 +50,6 @@ def display_menu():
                 try:
                     new_iterations = int(input("\nEnter new number of iterations: "))
                     myFibonacci.set_iterations(new_iterations)
-                    print(f"Number of iterations updated to {new_iterations}.")
                 except ValueError:
                     print("Invalid input. Please enter an integer.")
             else:
@@ -57,8 +57,8 @@ def display_menu():
 
         elif option == 5:
             if created:
-                myFibonacci.set_sequence()
-                print("\nFibonacci sequence has been updated.")
+                position = int(input("Position: "))
+                print(f"number: {myFibonacci.get_sequence_position(position)}")
             else:
                 print("\nNo Fibonacci sequence created yet.")
 
