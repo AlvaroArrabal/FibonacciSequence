@@ -1,4 +1,4 @@
-from modules.utils import (
+from app.modules.utils import (
     generate_sequence,
     validate_iterations,
     validate_position,
