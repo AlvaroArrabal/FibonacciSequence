@@ -1,4 +1,4 @@
-from fibonacci import Fibonacci
+from app.fibonacci import Fibonacci
 
 
 def display_menu():
